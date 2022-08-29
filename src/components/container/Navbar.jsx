@@ -1,9 +1,9 @@
 import React from 'react'
 
 export const Navbar = () => {
-    return (
+    return (        
         <header className="header">
-            {/* <h1>Logo</h1> */}
+            <img className='img_navbar' src={require('../../images/logo.png')} alt="css" width={55} />
             <nav>
                 <ul>
                     <li>Home</li>
@@ -12,6 +12,8 @@ export const Navbar = () => {
                     <li>Contacto</li>
                 </ul>
             </nav>
-        </header>
+            
+        </header>        
+            
     )
 }
