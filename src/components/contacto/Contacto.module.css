@@ -1,0 +1,34 @@
+.contacto {
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    /* background-color: whitesmoke; */
+    padding: 30px 60px;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(5, 4, 8, 0.397);
+    text-align: center;
+    width: 600px;
+  }
+  
+  .textarea {
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  input {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    background-color: none;
+    border: none;
+    font-size: 18px;
+    box-shadow: 0 2px 7px rgba(5, 4, 8, 0.397);
+    padding: 8px;
+    border-radius: 10px;
+  }

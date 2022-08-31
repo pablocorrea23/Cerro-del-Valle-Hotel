@@ -1,8 +1,9 @@
-import { Home } from './components/container/Home';
-import { Navbar } from './components/container/Navbar';
-import { Servicios } from './components/container/Servicios';
-import { Galeria } from './components/container/Galeria';
-import { Contacto} from './components/container/Contacto';
+import { Home } from './components/Home/Home';
+import { Navbar } from './components/Navbar/Navbar';
+import { Servicios } from './components/Servicios/Servicios';
+import { Galeria } from './components/Galeria/Galeria';
+import { Contacto} from './components/contacto/Contacto';
+import { Router } from 'react-router-dom';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Contacto/>
       </header>
     </div>
+    
   );
 }
 

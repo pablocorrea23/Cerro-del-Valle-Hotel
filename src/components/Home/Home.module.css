@@ -1,0 +1,28 @@
+.title {
+    margin-top: 140px;
+    margin-left: 90px;
+  }
+  
+  .description_title {
+    font-size: 25px;
+  }
+  
+  /* .title{
+    background-image: url('../src/images/img\ hero.png');
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: cover;
+  } */
+  
+  .img_titulo {
+    z-index: 3;
+  }
+  
+  .description {
+    font-size: 25px;
+    border: 1px solid white;
+    margin-top: 130px;
+    margin-left: 45px;
+    margin-right: 146px;
+    padding: 25px;
+  }
