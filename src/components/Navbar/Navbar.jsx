@@ -7,11 +7,14 @@ export const Navbar = () => {
             <nav>
                 <ul>
                     <li>Home</li>
+                    <li>Noticias</li>
                     <li>Servicios</li>
                     <li>Galeria de fotos</li>
                     <li>Contacto</li>
+                    <li className="ingreso">Ingresar</li>
                 </ul>
             </nav>
+        
             
         </header>        
             

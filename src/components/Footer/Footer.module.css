@@ -1,0 +1,103 @@
+.footer{
+    margin-top: 50px;
+    border-top: 3px solid gray;
+    height: 150px;
+}
+
+.imagen-datos{
+display:flex;
+flex-direction: row;
+
+}
+.footer-imagen{
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    height: 120px;
+}
+
+.contacto-container{
+    display:flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    /* text-align: center; */
+    padding-left: 50px;
+    
+}
+
+.contenedor-dato h3{
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* t,m,u*/
+.contact-container{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+  /* tels */
+.telefono{
+    display:flex;
+    flex-direction: row;
+}
+
+.telefono h3{
+    font-size: 15px;
+    font-weight: bold;  
+}
+.telefono h4{
+    font-size: 15px;
+}
+
+/* mail*/
+.correo{
+    display:flex;
+    flex-direction: row;
+}
+.correo h3{
+    font-size: 15px ;
+    font-weight: bold;
+}
+.correo h4{
+    font-size: 15px;
+}
+
+/* ubicación*/
+.ubicacion{
+    display:flex;
+    flex-direction: row;
+}
+.ubicacion h3{
+    font-size: 15px;
+    font-weight: bold;
+}
+.ubicacion h4{
+    font-size: 15px;
+}
+
+
+.nodos{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: rgb(21, 20, 20);
+}
+.nodos-imagen{
+    height: 35px;
+    margin-left: 10px;
+}
+
+.nodos h4{
+    font-size: 20px;
+}
+
+.nodos h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+} 

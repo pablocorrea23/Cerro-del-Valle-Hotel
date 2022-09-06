@@ -1,19 +1,22 @@
-import { Home } from './components/container/Home';
-import { Navbar } from './components/container/Navbar';
-import { Servicios } from './components/container/Servicios';
-import { Galeria } from './components/container/Galeria';
-import { Contacto} from './components/container/Contacto';
+import { Home } from './components/Home/Home';
+import { Navbar } from './components/Navbar/Navbar';
+import { Servicios } from './components/Servicios/Servicios';
+import { Galeria } from './components/Galería/Galeria';
+import { Contacto} from './components/Contacto/Contacto';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Navbar/>
+      <Navbar/>
+
+      <main>
         <Home/>
         <Servicios/>
         <Galeria/>
         <Contacto/>
-      </header>
+      </main>
+      <Footer/>
     </div>
   );
 }
