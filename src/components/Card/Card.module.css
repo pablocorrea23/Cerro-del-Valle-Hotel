@@ -1,0 +1,27 @@
+.img{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+h3{
+  position:absolute;
+  text-align: center;
+  bottom: 0;
+  font-size: 18px;
+  /* justify-content: center; */
+}
+
+.img img {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+

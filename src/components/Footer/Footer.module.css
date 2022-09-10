@@ -4,19 +4,19 @@
     height: 150px;
 }
 
-.imagen-datos{
+.imagenDatos{
 display:flex;
 flex-direction: row;
 
 }
-.footer-imagen{
+.footerImagen{
     margin-top: 30px;
     margin-left: 50px;
     margin-bottom: 50px;
     height: 120px;
 }
 
-.contacto-container{
+.contactoContainer{
     display:flex;
     flex-direction: column;
     /* align-items: center; */
@@ -27,17 +27,18 @@ flex-direction: row;
     
 }
 
-.contenedor-dato h3{
+.contenedorDato h3{
     font-weight: bold;
     font-size: 15px;
     margin-bottom: 30px;
 }
 
 /* t,m,u*/
-.contact-container{
+.contactContainer{
     display:flex;
     justify-content:space-around;
     align-items: center;
+    position: absolute;
 }
 
   /* tels */
@@ -87,7 +88,7 @@ flex-direction: row;
     justify-content: center;
     background-color: rgb(21, 20, 20);
 }
-.nodos-imagen{
+.nodosImagen{
     height: 35px;
     margin-left: 10px;
 }
@@ -97,6 +98,7 @@ flex-direction: row;
 }
 
 .nodos h3{
+    position: relative;
     font-size: 20px;
     font-weight: bold;
     margin-left: 30px;

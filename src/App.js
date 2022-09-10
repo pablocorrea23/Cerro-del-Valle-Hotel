@@ -16,6 +16,7 @@ function App() {
         <Galeria/>
         <Contacto/>
       </main>
+      
       <Footer/>
     </div>
   );
