@@ -9,7 +9,7 @@ export const Card = (props) => {
           src={props.img}
           alt="baño"
         />
-        <h3>{props.title}</h3>
+        <h3 className={style.h3Card}>{props.title}</h3>
       </div>
     </div>
   );
