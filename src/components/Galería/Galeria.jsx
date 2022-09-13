@@ -5,7 +5,7 @@ import style from './Galeria.module.css'
 export const Galeria = () => {
   return (
     <div className={style.galeria}>
-      <h3 className={style.titleGaleria}>Galería de Fotos</h3>
+      <h3 className={style.titleGaleria} id='Galeria de Fotos' >Galería de Fotos</h3>
 
       <div className={style.containerImg}>
         <div className={style.boxImg}>

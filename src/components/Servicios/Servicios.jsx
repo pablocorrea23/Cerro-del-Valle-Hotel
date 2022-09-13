@@ -9,7 +9,7 @@ import style from './Servicios.module.css'
 export const Servicios = () => {
   return (
     <div>
-        <h3 className={style.titleServicios}> Servicios</h3>
+        <h3 className={style.titleServicios} id='Servicios'> Servicios</h3>
 
         <div className={style.cards}>
 

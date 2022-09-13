@@ -5,12 +5,13 @@
 }
 
 .h3Card{
-  /* padding: 15px; */
-  position:absolute;
-  /* justify-content: center; */
-  /* text-align: center; */
-  bottom: 0;
   font-size: 18px;
+  font-weight: bold;
+  padding: 22px 35px;
+  position:absolute;
+  bottom: 0;
+  justify-content: center;
+  text-align: center;
 }
 
 .img img {

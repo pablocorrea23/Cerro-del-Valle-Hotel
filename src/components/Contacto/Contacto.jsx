@@ -4,7 +4,7 @@ import style from './Contacto.module.css'
 export const Contacto = () => {
   return (
     <div >
-      <h3 className={style.contactoTitulo}>Contacto</h3>
+      <h3 className={style.contactoTitulo} id="Contacto">Contacto</h3>
 
       <div className={style.contacto}>
 

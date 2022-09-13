@@ -6,11 +6,11 @@
     align-items: center;
     justify-content: center;
     transition: 0.4s;
-    /* margin-bottom: 30px; */
+    padding: 60px;
 }
 
 .titleServicios:hover {
-    letter-spacing: 2px;
+    letter-spacing: 4px;
 }
 
 
@@ -20,5 +20,5 @@
     gap: 10px;
     align-content: center;
     justify-content: space-between;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }

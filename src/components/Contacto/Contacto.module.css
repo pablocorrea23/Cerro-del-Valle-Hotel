@@ -1,14 +1,16 @@
 .contactoTitulo {
     font-weight: 200;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     transition: 0.4s;
+    padding: 60px;
 }
 
 .contactoTitulo:hover{
-    letter-spacing: 2px;
+    letter-spacing: 4px;
 }
 
 
@@ -51,11 +53,8 @@ input {
     border-radius: 15px;
     margin-bottom: 20px;
     margin-left: 10px;
+    resize: none;
 }
-
-/* .containerImg{
-    height: 500px
-} */
 
 
 
