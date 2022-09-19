@@ -168,14 +168,3 @@ input {
   padding: 8px;
   border-radius: 10px;
 }
-.buttonIngresar{
-  display: flex;
-  width: 120vh;
-  justify-content: flex-end;
-}
-.ingresar{
-  font-size: revert;
-  margin: 10px;
-  border: 21px;
-  border-radius: 16px;
-}
