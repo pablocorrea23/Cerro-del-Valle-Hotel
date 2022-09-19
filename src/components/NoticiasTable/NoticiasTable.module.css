@@ -1,0 +1,14 @@
+.box h3 {
+    padding-left: 30px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-decoration: underline;
+}
+
+.box hr{
+    margin-top: 30px;
+}
+
+.box th{
+    padding: 20px;
+}

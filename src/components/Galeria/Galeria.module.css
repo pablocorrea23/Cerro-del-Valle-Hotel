@@ -4,6 +4,12 @@
     align-items: center;
     justify-content: center;
   }
+
+  .Galeria_galeria_super{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
   .container_img {
     width: 100%;
@@ -16,7 +22,6 @@
     grid-template-rows: 250px;
     grid-gap: 20px;
     margin-top: 10px;
-    margin-left: 170px;
   }
   
   .container_img .box_img figure {

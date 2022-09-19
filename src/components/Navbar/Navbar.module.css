@@ -28,3 +28,10 @@
     margin-right: 15px;
 
 }
+
+button {
+    
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}

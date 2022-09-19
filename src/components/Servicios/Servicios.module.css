@@ -6,6 +6,8 @@
     font-weight: 200;
 }
 
-.img_cards {
-    margin-left: 107px;
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

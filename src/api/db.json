@@ -1,0 +1,52 @@
+{
+  "prendas": [
+    {
+      "id": 1,
+      "titulo": "JEANS MOM LIGHT GREY",
+      "descripcion": "JEANS MOM LIGHT GREY",
+      "imagen": "https://www.revstondenim.com.ar/3754-large_default/384-jeans-mom-light-grey.jpg"
+    },
+    {
+      "id": 2,
+      "titulo": "JEANS JOGGER",
+      "descripcion": "JEANS MOM LIGHT GREY",
+      "imagen": "https://www.revstondenim.com.ar/3737-large_default/378-jeans-jogger-.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "JEANS CARGO SNOWY GRAY",
+      "descripcion": "JEANS MOM LIGHT GREY",
+      "imagen": "https://www.revstondenim.com.ar/3729-large_default/382-jeans-cargo-snowy-gray-.jpg"
+    },
+    {
+      "id": 4,
+      "titulo": "JEANS AUSTIN LIGHT BLUE",
+      "descripcion": "JEANS MOM LIGHT GREY",
+      "imagen": "https://www.revstondenim.com.ar/3696-large_default/302-jeans-austin-light-blue.jpg"
+    },
+    {
+      "id": 5,
+      "titulo": "JEANS BLACK AUSTIN",
+      "descripcion": "JEANS MOM LIGHT GREY",
+      "imagen": "https://www.revstondenim.com.ar/3661-large_default/346-jeans-black-austin.jpg"
+    },
+    {
+      "titulo": "Gran Torino",
+      "descripcion": "khvjhvhjvv",
+      "imagen": "https://www.revstondenim.com.ar/3661-large_default/346-jeans-black-austin.jpg",
+      "id": 1663243277907
+    },
+    {
+      "titulo": "iron man",
+      "descripcion": "kskkt",
+      "imagen": "C:\\fakepath\\image 2 (1).png",
+      "id": 1663247932372
+    },
+    {
+      "titulo": "iron man",
+      "descripcion": "yrwsfgb",
+      "imagen": "C:\\fakepath\\logo nodos hub.png",
+      "id": 1663248949199
+    }
+  ]
+}

@@ -1,3 +1,12 @@
+body{
+  background-image: url('../../images/img\ hero.png');
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: contain;
+  background-color: black;
+  color: white;
+}
+
 .title {
     margin-top: 140px;
     margin-left: 90px;
