@@ -1,54 +1,132 @@
-import React from 'react'
-import axios from 'axios'
-import { useEffect, useState } from 'react'
-import Card from '../Cards/Card'
-import style from "./Noticias.module.css"
+import React, { useState, useEffect } from 'react'
+import { NoticiasForm } from '../NoticiasForm/NoticiasForm'
+import { NoticiasTable } from '../NoticiasTable/NoticiasTable';
+import { helpHttp } from '../../helpers/helpHttp'
+import styles from './Noticias.module.css';
+import swal from 'sweetalert';
+import { Loader } from '../Loader/Loader';
+import { Mensaje } from '../Mensaje/Mensaje';
+
+
 
 
 export const Noticias = () => {
 
-    const [data, setData]=useState([])
+  const [db, setDb] = useState(null);
 
-    useEffect(() => {
-        axios.get('https://rickandmortyapi.com/api/character').then((response) => {
+  const [dataToEdit, setdataToEdit] = useState(null);
 
-            let aux = response.data.results
+  const [error, setError] = useState(null);
 
-            setData(aux.forEach((e) => {
-                console.log(e);
-            }))
-            setData(response.data.results)
+  const [loading, setLoading] = useState(false);
 
-        })
-            .catch(function (error) {
+  let api = helpHttp();
+  let url = 'http://192.168.68.129:8000/api/inicio';
 
-                console.log(error);
-            })
-            .then(function () {
+  useEffect(() => {
+    setLoading(true);
 
-            });
-    }, []);
+    helpHttp().get(url).then((res) => {
+      
+      if (!res.err) {
+        setDb(res);
+        setError(null);
+      } else {
+        setDb(null)
+        setError(res)
+      }
+
+      setLoading(false);
+    })
+  }, [url]);
 
 
 
-    return (
-        <div className={style.card_content}>
+  const createData = (data) => {
+    //data.id = Date.now();
+    //console.log(data);
 
-            {data?.map((el) => {
-                return (
-                    <>
-                        <div key={el.id}>
-                            <Card
+    let options = { body: data, headers: { 'Content-Type': 'application/json' }};
 
-                                name={el.name}
-                                image={el.image}
-                            />
-                        </div>
-                    </>
-                )
-            })}
+    api.post(url, options).then((res) => {
+      console.log(res);
+      if (!res.err) {
+        setDb([...db, res]);
+      } else {
+        setError(res);
+      }
+    });
+    
+  };
 
-        </div>
 
-    )
+
+  const updateData = (data) => {
+
+    let endpoint = `${url}/${data.id}`
+
+    let options = { body: data, headers: { 'Content-Type': 'application/json' } };
+
+    api.put(endpoint, options).then((res) => {
+      console.log(res);
+      if (!res.err) {
+        let newData = db.map(el => el.id === data.id ? data : el);
+        setDb(newData);
+      } else {
+        setError(res);
+      }
+    });
+  };
+
+
+
+
+  const deleteData = (id) => {
+
+    swal({
+      title: (`Está seguro que desea eliminar la noticia '${id}'?`),
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+      .then((willDelete) => {
+        if (willDelete) {
+          let endpoint = `${url}/${id}`;
+          let options = { headers: { 'Content-Type': 'application/json' } };
+
+          api.del(endpoint, options).then(res => {
+            console.log(res);
+            if (!res.err) {
+              let newData = db.filter((el) => el.id !== id);
+              setDb(newData);
+            } else {
+              setError(res);
+            }
+          })
+
+          swal("La noticia fue eliminada correctamente!", {
+            icon: "success",
+          });
+        } else {
+          swal("No hubo cambios en la noticia");
+          return
+        }
+      });
+  };
+
+  return (
+    <div className={styles.box}>
+
+      <h2>CRUD NOTICIAS</h2>
+
+      <NoticiasForm createData={createData} updateData={updateData} dataToEdit={dataToEdit} setdataToEdit={setdataToEdit} />
+
+      {loading && <Loader />}
+
+      {error && <Mensaje msg={`Error ${error.status}: ${error.statusText}`} bgColor="#dc3545" />}
+
+      {db && <NoticiasTable data={db} setdataToEdit={setdataToEdit} deleteData={deleteData} />}
+
+    </div>
+  )
 }

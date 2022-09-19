@@ -1,12 +1,25 @@
-.card_content{
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+.box {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    background-size: cover;
+    background-repeat: repeat;
+    padding-left: 8px;
+    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    height: 100%;
+
+
+    color: black;
+
 }
-.servicios{
+
+.box h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 60px;
-    font-weight: revert;
+    padding-top: 30px;
+
 }

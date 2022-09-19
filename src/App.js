@@ -1,18 +1,17 @@
-import { Home } from './components/container/Home';
+import { MisRutas } from './components/Router/MisRutas';
 
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import {Login} from "./components/Login/Login"
+
 
 function App() {
-  
   return (
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/login" element={<Login/>}/>
-          </Routes>
-        </BrowserRouter>
-        
+    <div className="App">
+      <header className="App-header">
+
+      <MisRutas/>
+
+      </header>
+    </div>
+
   );
 }
 
