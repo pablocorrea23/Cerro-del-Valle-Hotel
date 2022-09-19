@@ -8,10 +8,10 @@ export const Login = () =>{
 		axios.post({
 			url:"192.168.68.129:8000/api/Admin",
 		})
-			.then((response) => {
+			console.log.then((response) => {
 				console.log(response.data);
 			})
-			.catch((error) => {
+			console.log.catch((error) => {
 				console.log(error);
 			});
 	}, []);
