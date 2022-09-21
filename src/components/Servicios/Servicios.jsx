@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from '../Card/Card'
+import { Card } from '../Card Servicios/CardServicio'
 import img1 from '../../images/imagen-servicios/img1.jpeg'
 import img2 from '../../images/imagen-servicios/img2.jpeg'
 import img3 from '../../images/imagen-servicios/img3.jpeg'
