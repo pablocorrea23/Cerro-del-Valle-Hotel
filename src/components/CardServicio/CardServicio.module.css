@@ -1,0 +1,19 @@
+.img {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.h3Card {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 22px 35px;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.img img {
+    width: 100%;
+}

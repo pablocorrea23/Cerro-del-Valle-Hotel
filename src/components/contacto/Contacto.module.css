@@ -1,56 +1,78 @@
 
-.contenedor_form{
+.contactoTitulo {
+  font-weight: 200;
+  font-weight: bold;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border-bottom: 3px solid grey;
+  justify-content: center;
+  position: relative;
+  transition: 0.4s;
+  padding: 60px;
 }
 
-.contacto {
-    font-weight: 200;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-  }
-  
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-    /* background-color: whitesmoke; */
-    padding: 30px 60px;
-    border-radius: 20px;
-    box-shadow: 0 15px 25px rgba(5, 4, 8, 0.397);
-    text-align: center;
-    width: 700px;
-    margin-left: 50px;
-  }
-  
-  
-  input {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px;
-    margin-bottom: -5px;
-    background-color: none;
-    border: none;
-    font-size: 18px;
-    box-shadow: 0 2px 7px rgba(5, 4, 8, 0.397);
-    padding: 8px;
-    border-radius: 4px;
-    width: 600px;
-  }
+.contactoTitulo:hover{
+  letter-spacing: 4px;
+}
 
-  .textarea{
-    border-radius: 5px;
-    margin-bottom: 15px;
-    margin-left: 8px;
-    width: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
-  
+.contacto{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding: 30px 60px;
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(5, 4, 8, 0.397);
+  text-align: center;
+  width: 100%;
+  background-image: url(../../images/imagen-contacto/imagen\ fom.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 400px;
+}
+
+.textarea {
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+input {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  background-color: none;
+  border: none;
+  font-size: 18px;
+  box-shadow: 0 2px 7px rgba(5, 4, 8, 0.397);
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.form textarea{
+  border-radius: 15px;
+  resize: none;
+}
+
+.containerImg {
+  width: 50%;
+  height: 100%;
+}
+
+.containerImg img {
+  width: 100%;
+  height: 100%;
+}
+
+form * {
+  width: 60%;
+  margin: 0 auto;
+}
+

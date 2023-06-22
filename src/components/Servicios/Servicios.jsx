@@ -1,17 +1,24 @@
-import React from 'react';
-import styles from './Servicios.module.css';
+import React from 'react'
+import { CardServicio } from '../CardServicio/CardServicio'
+import img1 from '../../images/imagen-servicios/img1.png'
+import img2 from '../../images/imagen-servicios/img2.png'
+import img3 from '../../images/imagen-servicios/img3.png'
+import img4 from '../../images/imagen-servicios/img4.png'
+import style from './Servicios.module.css'
 
 export const Servicios = () => {
   return (
     <div>
-        <h3 className={styles.servicios}>S e r v i c i o s</h3>
+        <h3 className={style.titleServicios} id='Servicios'> Servicios</h3>
 
-        <div className={styles.cards}>
+        <div className={style.cards}>
 
-            {/* Aca iria un map con las imagenes que me lleguen del back para las cards */}
-        <img className={styles.img_cards} src={require('../../images/Captura de pantalla servicios.png')} alt="css" width={1300} />
-        </div>
-        
-    </div>
+          {/* Acá iría un map con las imágenes que me lleguen del back para las cards */}
+          <CardServicio img={img1} title="Habitaciones con baño en suit"/>
+          <CardServicio img={img2} title="Desayuno a la habitación"/>
+          <CardServicio img={img3} title="Estacionamiento y pileta"/>
+          <CardServicio img={img4} title="Calefación con salamandra"/>
+        </div> 
+    </div> 
   )
 }

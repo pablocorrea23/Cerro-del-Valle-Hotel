@@ -11,8 +11,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: white;
+  background-image: url('../src/images/img\ hero.png');
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: contain;
+}
 
+.servicios {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  font-weight: 200;
+}
 
+.img_cards {
+  margin-left: 107px;
 }
 
 code {
@@ -27,7 +43,6 @@ code {
 }
 
 .rdt_TableCell {
-  background-color: rgb(153, 193, 234);
   font-size: 20px;
 }
 
@@ -93,3 +108,4 @@ a {
     transform: rotate(360deg);
   }
 }
+

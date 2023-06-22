@@ -1,0 +1,32 @@
+.box{
+  background-color: white;
+  width: 100%;
+  height:100vh;
+  color: black
+}
+
+.box h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.rdt_TableCol {
+  background-color: rgb(126, 161, 226);
+  color: white;
+}
+
+.rdt_TableCell {
+  background-color: aqua;
+}
+
+.rdt_Pagination {
+  font-size: 30px;
+}

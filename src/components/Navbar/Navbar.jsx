@@ -1,51 +1,54 @@
-import React from 'react'
-import { Admin } from '../Admin/Admin';
+import React, { useState } from 'react'
+import './Navbar.css'
 import { NavLink } from 'react-router-dom';
-import styles from './Navbar.module.css';
+import { Login } from '../Login/Login'
+// import { Link } from 'react-scroll'
 
 export const Navbar = () => {
 
+    const [click, setClick] = useState(false)
+
+    // const handleClick = () => setClick(!click)
+
+    const closeMenu = () => setClick(false)
+
     return (
-        <>
+        <header className='header'>
+            <img className='img_navbar' src={require('../../images/logo.png')} alt="css" width={55} />
 
-            <header className={styles.header}>
-                <img className={styles.img_navbar} src={require('../../images/logo.png')} alt="css" width={55} />
-                <nav className={styles.nav}>
-                    <ul className={styles.ul}>
-                        {/* <li className={styles.li}>Home</li> */}
+            <nav>
+                <ul className={click ? "nav-menu active" : "nav-menu"}>
+                    <li className='navItem'>
+                        <a href='#Home' onClick={closeMenu}>Home</a>
+                    </li>
+                    <li className='navItem'>
+                        <a href='#Noticias' onClick={closeMenu}>Noticias</a>
+                    </li>
+                    <li className='navItem'>
+                        <a href='#Servicios' onClick={closeMenu}>Servicios</a>
+                    </li>
+                    <li className='navItem'>
+                        <a href='#Galeria de Fotos' onClick={closeMenu}>Galeria de Fotos</a>
+                    </li>
+                    <li className='navItem'>
+                        <a href='#Contacto' onClick={closeMenu}>Contacto</a>
+                    </li>
 
-                        <li className={styles.li}>
-                            <a href='/noticias'>
-                                Noticias
-                            </a>
-                        </li>
+                    <div className='buttonIngresar'>
+                        <button className='ingresar'>
+                            <NavLink to='/login' element={<Login />}>Ingresar</NavLink>
+                        </button>
+                    </div>
+                </ul>
+            </nav>
 
-                        <li className={styles.li}>
-                            servicios
-                        </li>
-
-                        <li className={styles.li}>
-                            Galeria de fotos
-                        </li>
-
-                        <li className={styles.li}>
-                            Contacto
-                        </li>
-                    </ul>
-                </nav>
-
-
-                {/* <Link to='/admin'><button>Ingresar</button></Link> */}
-                {/* <NavLink to='/admin'><button>Ingresar</button></NavLink> */}
-
-                <button>
-                    <NavLink to='/admin' element={<Admin />}>Ingresar</NavLink>
-                </button>
-
-
-            </header>
-
-        </>
+            <div className="burger">
+                <box-icon name='menu' color={'#fff'} size={'md'}></box-icon>
+            </div>
+        </header>
 
     )
 }
+
+
+

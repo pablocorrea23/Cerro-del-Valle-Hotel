@@ -6,6 +6,7 @@ import styles from './Noticias.module.css';
 import swal from 'sweetalert';
 import { Loader } from '../Loader/Loader';
 import { Mensaje } from '../Mensaje/Mensaje';
+//import axios from 'axios';
 
 
 
@@ -21,15 +22,25 @@ export const Noticias = () => {
   const [loading, setLoading] = useState(false);
 
   let api = helpHttp();
-  let url = 'http://192.168.68.129:8000/api/inicio';
+  let url = 'http://192.168.68.139:81/api/noticias';
 
   useEffect(() => {
     setLoading(true);
 
+    // axios({
+    //   method: 'GET',
+    //   url: 'http://192.168.68.129:8000/api/admin/noticias', //cambiar a donde hay que pegarle
+    //   data: input
+    // }).then(res => res.data)
+    //   .then(datos => { console.log(datos) })
+
+    //   .catch(err => alert(err));
+
     helpHttp().get(url).then((res) => {
-      
+
       if (!res.err) {
-        setDb(res);
+        setDb(res); //con maxi seria res solo, con leo es 'noticias'
+        console.log(res);
         setError(null);
       } else {
         setDb(null)
@@ -43,10 +54,10 @@ export const Noticias = () => {
 
 
   const createData = (data) => {
-    //data.id = Date.now();
-    //console.log(data);
+    // data.id = Date.now();
+    // console.log(data);
 
-    let options = { body: data, headers: { 'Content-Type': 'application/json' }};
+    let options = { body: data, headers: { 'Content-Type': 'application/json' } };
 
     api.post(url, options).then((res) => {
       console.log(res);
@@ -56,8 +67,25 @@ export const Noticias = () => {
         setError(res);
       }
     });
-    
+
   };
+
+  // const createDataImage = (formData) => { // esta para la imagen
+  //   //data.id = Date.now();
+  //   //console.log(data);
+
+  //   let options = { body: formData, headers: { 'Content-Type': 'multipart/form-data' }};
+
+  //   api.post(url, options).then((res) => {
+  //     console.log(res);
+  //     if (!res.err) {
+  //       setDb([...db, res]);
+  //     } else {
+  //       setError(res);
+  //     }
+  //   });
+
+  // };
 
 
 
@@ -68,6 +96,7 @@ export const Noticias = () => {
     let options = { body: data, headers: { 'Content-Type': 'application/json' } };
 
     api.put(endpoint, options).then((res) => {
+
       console.log(res);
       if (!res.err) {
         let newData = db.map(el => el.id === data.id ? data : el);
@@ -77,6 +106,8 @@ export const Noticias = () => {
       }
     });
   };
+
+  
 
 
 
@@ -130,3 +161,4 @@ export const Noticias = () => {
     </div>
   )
 }
+//createDataImage={createDataImage}

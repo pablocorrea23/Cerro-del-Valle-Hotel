@@ -1,0 +1,113 @@
+.footer{
+    border-top: 3px solid gray;
+}
+
+.imagenDatos{
+    display:flex;
+    padding: 30px 50px;
+}
+.footerImagen{
+    height: 120px;
+}
+
+.contactoContainer{
+    display:flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    /* text-align: center; */
+    padding-left: 50px;
+    
+}
+
+.contenedorDato h3{
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+/* t,m,u*/
+.contactContainer{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap:30px;
+}
+
+  /* tels */
+.telefono{
+    display:flex;
+    flex-direction: row;
+    
+}
+
+.telefono h3{
+    font-size: 15px;
+    font-weight: bold;  
+}
+.telefono h4{
+    font-size: 15px;
+}
+
+/* mail*/
+.correo{
+    display:flex;
+    flex-direction: row;
+}
+.correo h3{
+    font-size: 15px ;
+    font-weight: bold;
+}
+.correo h4{
+    font-size: 15px;
+}
+
+/* ubicación*/
+.ubicacion{
+    display:flex;
+    flex-direction: row;
+}
+.ubicacion h3{
+    font-size: 15px;
+    font-weight: bold;
+}
+.ubicacion h4{
+    font-size: 15px;
+}
+
+
+.nodos{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: rgb(21, 20, 20);
+}
+.nodosImagen{
+    height: 35px;
+    margin-left: 10px;
+}
+
+.nodos h4{
+    font-size: 20px;
+}
+
+.nodos h3{
+    font-size: 20px;
+    position: relative;
+    font-weight: bold;
+    margin-left: 30px;
+} 
+@media (max-width: 768px) {
+  .contactContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+    .imagenDatos {
+      flex-direction: column;
+    }
+  }

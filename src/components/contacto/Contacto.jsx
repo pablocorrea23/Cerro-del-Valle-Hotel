@@ -63,118 +63,100 @@ export const Contacto = () => {
 
         axios({
             method: 'POST',
-            url: 'http://192.168.68.103:8000/api/contacto', //cambiar a donde hay que pegarle
+            url: 'http://192.168.68.139:81/api/contacto', //cambiar a donde hay que pegarle
             data: input
         }).then(res => res.data)
-            .then(datos => { console.log(datos) } )
+            .then(datos => { console.log(datos) })
 
             .catch(err => alert(err));
 
-        setInput({
-            nombre: "",
-            apellido: "",
-            email: "",
-            telefono: "",
-            mensaje: "",
-        });
-         e.target.reset(); //---> esto me limpia todos los campos del formulario
+        // setInput({
+        //     nombre: "",
+        //     apellido: "",
+        //     email: "",
+        //     telefono: "",
+        //     mensaje: "",
+        // });
+        e.target.reset(); //---> esto me limpia todos los campos del formulario
 
         swal("Perfecto!", "Tus datos fueron cargados correctamente!", "success");
     }
-    
+
 
     return (
 
-        <div>
+        <section>
+            <h3 className={styles.contactoTitulo} id="Contacto">Contacto</h3>
 
-            <h3 className={styles.contacto}>C o n t a c t o</h3>
-
-            <div className={styles.contenedor_form}>
-
+            <div className={styles.contacto}>
                 <form className={styles.form} action="" method="POST" onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        name="nombre"
+                        id="nombre"
+                        placeholder="Ingrese su nombre"
+                        onChange={(e) => handleChange(e)}
+                    /><br />
+                    {errors.name && (
+                        <p className='error'>{errors.name}</p>
+                    )}
 
-                    <div className="form-nombre">
+                    <input
+                        type="text"
+                        name="apellido"
+                        id="apellidos"
+                        placeholder="Ingrese su apellido"
+                        onChange={(e) => handleChange(e)}
+                    /><br />
+                    {errors.surname && (
+                        <p className='error'>{errors.surname}</p>
+                    )}
 
-                        <input
-                            type="text"
-                            name="nombre"
-                            id="nombre"
-                            placeholder="Ingrese su nombre"
-                            onChange={(e) => handleChange(e)}
-                        /><br />
-                        {errors.name && (
-                            <p className='error'>{errors.name}</p>
-                        )}
-                    </div>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Ingrese su E-mail"
+                        onChange={(e) => handleChange(e)}
+                    /><br />
+                    {errors.email && (
+                        <p className='error'>{errors.email}</p>
+                    )}
 
-                    <div className="form-apellido">
+                    <input
+                        placeholder="Ingrese su teléfono"
+                        type="text"
+                        name="telefono"
+                        id="telefono"
+                        onChange={(e) => handleChange(e)}
+                    /><br />
+                    {errors.phone && (
+                        <p className='error'>{errors.phone}</p>
+                    )}
 
-                        <input
-                            type="text"
-                            name="apellido"
-                            id="apellidos"
-                            placeholder="Ingrese su apellido"
-                            onChange={(e) => handleChange(e)}
-                        /><br />
-                        {errors.surname && (
-                            <p className='error'>{errors.surname}</p>
-                        )}
-                    </div>
-
-                    <div className="form-mail">
-
-                        <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="Ingrese su E-mail"
-                            onChange={(e) => handleChange(e)}
-                        /><br />
-                        {errors.email && (
-                            <p className='error'>{errors.email}</p>
-                        )}
-                    </div>
-
-                    <div className="form-telefono">
-
-                        <input
-                            placeholder="Ingrese su teléfono"
-                            type="text"
-                            name="telefono"
-                            id="telefono"
-                            onChange={(e) => handleChange(e)}
-                        /><br />
-                        {errors.phone && (
-                            <p className='error'>{errors.phone}</p>
-                        )}
-                    </div>
-
-                    <div>
-                        <textarea
-                            className={styles.textarea}
-                            name='mensaje'
-                            id='msg'
-                            placeholder='Deja un mensaje'
-                            onChange={(e) => handleChange(e)}
-                        />
-                        <br />
-                        {errors.msg && (
-                            <p className='error'>{errors.msg}</p>
-                        )}
-                    </div>
+                    <textarea
+                        className={styles.textarea}
+                        name='mensaje'
+                        id='msg'
+                        placeholder='Deja un mensaje'
+                        onChange={(e) => handleChange(e)}
+                    />
+                    <br />
+                    {errors.msg && (
+                        <p className='error'>{errors.msg}</p>
+                    )}
 
                     <input className={styles.input} type="submit" value="Enviar" id="submit" /><br />
                 </form>
 
-
-                <div className={styles.img_form}>
-                    <img className={styles.img_molino} src={require('../../images/images-galeria/imagen fom.png')} alt="css" width={600} />
-                </div>
-
+                {/* <div className={styles.containerImg}>
+                    <img
+                        src={require("../../images/imagen-contacto/imagen fom.png")}
+                        alt="css"
+                    />
+                </div> */}
             </div>
-
-
-        </div>
+        </section>
 
     )
 }
