@@ -9,8 +9,6 @@ function App() {
       <MisRutas/>
 
       {/* </header> */}
-
-      
     </div>
 
   );
