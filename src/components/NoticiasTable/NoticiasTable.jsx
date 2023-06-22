@@ -12,15 +12,17 @@ export const NoticiasTable = ({ data, setdataToEdit, deleteData }) => {
         <thead>
           <tr>
             <th>Titulo</th>
+            <th>Copete</th>
             <th>Imagen</th>
             <th>Descripción</th>
+            <th>Fecha</th>
             <th>Acciones</th>
           </tr>
         </thead>
 
         <tbody>
           {data.length > 0 ? (
-            data.map((el) => <NoticiasCrudTableRow key={el.id} el={el} setdataToEdit={setdataToEdit} deleteData={deleteData}/>)            
+            data.map((el, index) => <NoticiasCrudTableRow key={index} el={el} setdataToEdit={setdataToEdit} deleteData={deleteData}/>)            
           ) : (
             <tr>
               <td colSpan="4">Sin datos</td>

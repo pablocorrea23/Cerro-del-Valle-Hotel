@@ -1,13 +1,22 @@
-.servicios {
+.titleServicios {
+    font-weight: 200;
+    font-weight: bold;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 60px;
-    font-weight: 200;
+    transition: 0.4s;
+    padding: 60px;
 }
 
-.cards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.titleServicios:hover {
+    letter-spacing: 4px;
+}
+
+
+.cards{
+    padding: 0 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
 }

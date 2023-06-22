@@ -5,6 +5,25 @@
     color: black
 }
 
+.box h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.contenedorLink{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+}
+
 .rdt_TableCol {
     background-color: rgb(126, 161, 226);
     color: white;
